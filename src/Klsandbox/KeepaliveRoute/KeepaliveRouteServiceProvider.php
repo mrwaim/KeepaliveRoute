@@ -1,10 +1,11 @@
-<?php namespace Klsandbox\KeepaliveRoute;
+<?php
+
+namespace Klsandbox\KeepaliveRoute;
 
 use Illuminate\Support\ServiceProvider;
 
 class KeepaliveRouteServiceProvider extends ServiceProvider
 {
-
     /**
      * Indicates if loading of the provider is deferred.
      *
@@ -21,7 +22,7 @@ class KeepaliveRouteServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . '/../../../views/', 'keepalive-route');
 
         $this->publishes([
-            __DIR__ . '/../../../views/' => base_path('resources/views/vendor/keepalive-route')
+            __DIR__ . '/../../../views/' => base_path('resources/views/vendor/keepalive-route'),
         ], 'views');
     }
 
@@ -44,5 +45,4 @@ class KeepaliveRouteServiceProvider extends ServiceProvider
     {
         return [];
     }
-
 }

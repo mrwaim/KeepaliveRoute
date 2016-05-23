@@ -15,5 +15,4 @@ class KeepaliveController extends Controller
     {
         return view('keepalive-route::keepalive');
     }
-
 }
